@@ -5,6 +5,7 @@ import DiceFaceRow from "./DiceFaceRow";
 import doit from './doit.png'
 import Roller from "./Roller";
 import Button from "react-bootstrap/Button";
+import BonusRow from "./BonusRow";
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
                 Bwandon,
                 <div className='rowC'> Number of Dice: <ButtonRow setter={setNumDice}/></div>
                 <div className='rowC'> Dice Type: <DiceFaceRow setter={setDieFace}/></div>
-                <div className='rowC'> Bonus: <ButtonRow setter={setBonus}/></div>
+                <div className='rowC'> Bonus: <BonusRow setter={setBonus}/></div>
 
                 {numDice >= 0 && <div>I'll roll {numDice} </div>}
                 {dieFace >= 0 && <div>d{dieFace} dice </div>}
