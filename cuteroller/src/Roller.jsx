@@ -10,11 +10,11 @@ const Roller = ({numDice, dieFace, bonus}) => {
 
 
     for (let i = 0; i < numDice; i++) {
-        rolls.push(<div>{getRandomInt(dieFace) + bonus}</div>)
+        rolls.push(<div className='item'>{getRandomInt(dieFace) + bonus}</div>)
     }
 
     return (
-        <div>{rolls}</div>
+        <div className='rowC'>{rolls}</div>
     )
 }
 
