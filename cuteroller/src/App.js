@@ -35,8 +35,8 @@ function App() {
                 {dieFace >= 0 && <div>d{dieFace} dice </div>}
                 {bonus >= 0 && <div>with a +{bonus} modifier </div>}
 
-                <img className="center-fit" src={doit} alt="dewit" onClick={() => dewIt(true)} />
-                {didIt && <Roller numDice={numDice} dieFace={dieFace} bonus={bonus} />}
+                <img style={{cursor:'pointer'}} className="center-fit" src={doit} alt="dewit" onClick={() => dewIt(true)} />
+                {didIt && numDice >= 0 && dieFace >= 0 && bonus >= 0 && <Roller numDice={numDice} dieFace={dieFace} bonus={bonus} />}
                 {didIt && <Button variant="primary" onClick={() => clear()}>Clear</Button>}
 
             </header>
